@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Clone</title>
+    <!--owl css-->
+    <link rel="stylesheet" href="style/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl.theme.default.min.css">
+    <!--owl css-->
+    <style>
+        :root {
+            --vermelho: #E50914;
+            --preta: #141414;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--preta);
+            font-family: 'Arial', Times, serif;
+            color: white;
+        }
+
+        header .container {
+            display: flex;
+            flex-direction: row;
+            /*ao colocar o display flex, a configuração flex-direction: row ja vem automaticamente*/
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            margin-left: 5px;
+            color: var(--vermelho);
+            font-family: 'Arial Black';
+            font-size: 40px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #AAA;
+            margin-right: 10px;
+        }
+
+        header nav a:hover {
+            color: #fff;
+        }
+
+        /*Filme principal*/
+
+        .filme-principal {
+            font-size: 16px;
+            background: linear-gradient(rgba(0, 0, 0, .40), rgba(0, 0, 0, .40)100%), url('/img/capa-house.jpg');
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .filme-principal .titulo{
+            font-size: 50px;
+        }
+        .filme-principal .descricao{
+            margin-bottom:  40px;
+            max-width: 50%;
+        }
+        .botao{
+            background-color: rgba(0,0,0,.50);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: .3s ease all;
+            border-radius: 5px;
+        }
+        .botao:hover{
+            background-color: white;
+            color: black;
+        }
+        .botao i{
+            margin-right: 10 px;
+        }
+        .container{
+            margin-left: 20px;
+        }
+        .filme-principal .container{
+            width: 100%;
+        }
+        .box-filme{
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+        /*Responsividade*/
+        @media screen and (max-width:700px ) {
+            header .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .botao{
+                margin-top: 5px;
+                width: 220px;
+            }
+            .filme-principal .descricao{
+            margin-bottom:  20px;
+            max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">HOUSE OF CARDS</h3>
+                <p class="descricao">Nada pode impedir o político sem escrúpulos, Frank Underwood de conquistar Washington. Assista agora a nova temporada de House of Cards, está imperdível.</p>
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><a href="https://youtu.be/0DAmWHxeoKw"><img class="box-filme" src="img/mini1.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/Cmgv3fwoxQw"><img class="box-filme" src="img/mini2.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/D0zYJ1RQ-fs"></a><img class="box-filme" src="img/mini3.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/FkTybqcX-Yo"></a><img class="box-filme" src="img/mini4.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/iVAgTiBrrDA"></a><img class="box-filme" src="img/mini5.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/2-W6_6gJda0"></a><img class="box-filme" src="img/mini6.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/MczMB8nU1sY"></a><img class="box-filme" src="img/mini7.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/CX1Wn5zkfI8"></a><img class="box-filme" src="img/mini8.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/JungYQt0T6c"></a><img class="box-filme" src="img/mini9.jpg" alt=""></a></div>
+            <div class="item"><a href="https://youtu.be/6ZfuNTqbHE8"></a><img class="box-filme" src="img/mini10.jpg" alt=""></a></div>
+        </div>
+    </div>
+
+
+
+    
+    <script src="https://kit.fontawesome.com/3750dc6253.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/setup.js"></script>
+</body>
+
+</html>
